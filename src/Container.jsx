@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Stats from "./Stats";
 import Textarea from "./Textarea";
+import { InstagramCharacters, FacebookCharacters } from "./constants";
 
 export default function Container() {
   const [text, setText] = useState("");
@@ -13,8 +14,8 @@ export default function Container() {
     const wordsCounts = text.split(" ");
     words = wordsCounts.length - 1;
   }
-  const instagram = 280 - numberOfCharacters;
-  const facebook = 2200 - numberOfCharacters;
+  const instagram = InstagramCharacters - numberOfCharacters;
+  const facebook = FacebookCharacters - numberOfCharacters;
 
   return (
     <main className="container">
